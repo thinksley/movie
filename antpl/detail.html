@@ -3,9 +3,13 @@
 		<img src="/movie/Uploads/Pic/{{data[0].mediumthumb}}" alt="">
 	</div>
 	<h1 class="">{{data[0].title}}</h1>
+	<p>
+	阅读数:{{clickNum}}
+	</p>
+	<br />
+
 	<div ng-bind-html="data[0].content"></div>
 </div>
-
 <div class="main-inner comment-list" ng-controller="CommentListCtrl">
 	<ul>
 		<li ng-repeat="vo in data">
@@ -15,10 +19,8 @@
 </div>
 
 <div class="main-inner" ng-controller="AddCommentCtrl">
-	
 	<input type="hidden" name="aid" ng-model='data[0].id' value="{{data[0].id}}" />
-	<input type="hidden" name="username" ng-model='data[0].username' value="{{username}}">
+	<input type="hidden" name="username" ng-model='data[0].username' value="{{username}}" />
 	<textarea name="comment" id="comment" ng-model='comment' cols="30" rows="10"></textarea>
 	<input type="submit" value="评论" ng-click="add()" />
-	
 </div>

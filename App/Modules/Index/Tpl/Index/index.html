@@ -74,12 +74,16 @@ movieApp.controller('MovieListCtrl',['$scope','$location','$resource',function($
 	
 }]);
 
-movieApp.controller('MovieDetailCtrl',['$scope','$location','$resource','$routeParams',function($scope,$location,$resource,$routeParams){
+movieApp.controller('MovieDetailCtrl',['$scope','$location','$resource','$routeParams','$http',function($scope,$location,$resource,$routeParams,$http){
 
 	var objRe = $resource( '/movie/index.php/index/Index/getMovieDetail/movies/'+$routeParams.movieId,{},{});
 	$scope.data = objRe.query();
 
 	$scope.username=username;
+
+	$http.get('/movie/index.php/index/Index/clickNum/id/'+$routeParams.movieId).success(function(data,state,headers,config){
+		$scope.clickNum=data;
+	});
 	
 }]);
 
