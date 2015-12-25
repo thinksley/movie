@@ -1,0 +1,28 @@
+
+
+
+<div class="main-inner">
+	
+	Search: <input ng-model="query">
+	<br/><br/>
+	<div class="main-con hd-list new-hd-list">
+		<ul class="clearfix" style=" width:1200px;">
+			<li ng-repeat="vo in data | filter:query" >
+				<a href="#/movies/{{vo.id}}" class="pitem">
+				    <span class="lb-bg"></span>
+					<span class="lb-txt"></span>
+
+		            <div class="pitem-cover" style="background: url(/movie/Uploads/Pic/{{vo.maxthumb}});background-size:cover;background-position:50% 50%;border-radius: 6px 6px 0 0;"></div>
+		                          
+		            <div class="pitem-title">{{vo.title}}</div>
+		            <div class="pitem-content">{{vo.summary}}</div>
+		            <div class="pitem-event-cover"></div>
+		            <p class="p-status" ng-if="vo.roadshow">
+		    		上映时间：{{vo.roadshow}} </p>
+
+		        </a>
+		        <input class="end-time" type="hidden" value="1546185600">
+			</li>
+		</ul>
+	</div>
+</div>

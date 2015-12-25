@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="__PUBLIC__/Css/common.css" />
+	<link rel="stylesheet" href="__PUBLIC__/Css/list.css" />
+	<script type="text/JavaScript" src='__PUBLIC__/Js/jquery-1.7.2.min.js'></script>
+	<script type="text/JavaScript" src='__PUBLIC__/Js/common.js'></script>
+</head>
+<body>
+<!--头部-->
+	<include file="common:header" />
+<!--主体-->
+	<div class='main'>
+		<div class='main-left'>
+
+			<foreach name='blog' item='v'>
+				<dl>
+					<dt>{$v.name}</dt>
+					<dd class='channel'><a href="{:U('/'.$v['id'])}">{$v.title}</a></dd>
+					<dd class='info'>
+						<span class='time'>发布于：{$v.time|date='Y-m-d',###}</span>
+						<span class='click'>点击：{$v.click}</span>
+					</dd>
+					<dd class='content'>{$v.summary}</dd>
+					<dd class='read'>
+						<a href="{:U('/'.$v['id'])}">阅读全文>></a>
+					</dd>
+				</dl>
+			</foreach>
+
+			<div>{$page}</div>
+		</div>
+	<!--主体右侧-->
+		<include file="common:right" />
+	</div>
+<!--底部-->
+	<div class='bottom'>
+		<div></div>
+	</div>
+</body>
+</html>
