@@ -1,9 +1,61 @@
-<div class="main-inner">
-	
- 	<form action="/movie/index.php/Index/User/register" method="POST">
+<div class="main-inner" ng-controller="RegisterCtrl">
+ 	<!-- <form action="/movie/index.php/Index/User/register" method="POST">
 		<input type="text" autocomplate="off" name="username"><br/>
 		<input type="password" name="password" /><br/>
 		<input type="password" name="repassword" /><br/>
 		<input type="submit" value="确定" />
-	</form>
+	</form> -->
+	
+	<form novalidate name="myForm" class="form-horizontal" action="/movie/index.php/Index/User/register" method="POST">
+    	
+
+        <!--用户名-->
+		<div class="form-group" ng-class="{'has-error':myForm.username.$dirty &&myForm.username.$invalid}">
+		    <label  class="col-sm-2 control-label">用户名</label>
+		    <div class="col-sm-10">
+				<input autocomplete="off" type="text" ng-pattern="/^[a-zA-Z]{1}/" class="form-control" name="username" placeholder="用户名" ng-required="true" ng-minlength="5" ng-maxlength="10" ng-model="data.username"/>
+
+				<div ng-show="myForm.username.$error.pattern" class="alert alert-danger help-block">
+				用户名必须以字母开头
+				</div>
+				<div ng-show="myForm.username.$error.maxlength" class="alert alert-danger help-block">
+				用户名长度不能超过10位
+				</div>
+				<div ng-show="myForm.username.$error.minlength" class="alert alert-danger help-block">
+				用户名长度不能小于5位
+				</div>
+		    </div>
+		</div>
+		
+		<!--密码-->
+			<div class="form-group" ng-class="{'has-error':myForm.password.$dirty &&myForm.password.$invalid}">
+			    <label  class="col-sm-2 control-label">密码</label>
+			    <div class="col-sm-10">
+					<input autocomplete="off" type="password" class="form-control" name="password" placeholder="密码" ng-required="true" ng-minlength="5" ng-maxlength="10" ng-model="data.password"/>
+
+					<div ng-show="myForm.password.$error.maxlength" class="alert alert-danger help-block">
+					用户名长度不能超过10位
+					</div>
+					<div ng-show="myForm.password.$error.minlength" class="alert alert-danger help-block">
+					用户名长度不能小于5位
+					</div>
+			    </div>
+			</div>
+
+			<!--确认密码-->
+			<div class="form-group" ng-class="{'has-error':myForm.repassword.$dirty &&myForm.repassword.$invalid}">
+			    <label  class="col-sm-2 control-label">确认密码</label>
+			    <div class="col-sm-10">
+					<input autocomplete="off" type="password" class="form-control" name="repassword" placeholder="确认密码" ng-required="true" ng-minlength="5" ng-maxlength="10" ng-model="data.repassword"/>
+
+					<div ng-show="myForm.password.$dirty && myForm.repassword.$dirty && data.password!=data.repassword" class="alert alert-danger help-block">
+					两次密码不一致
+					</div>
+					
+			    </div>
+			</div>
+       		
+       		<input type="submit" class="btn btn-primary btn-lg" value="submit" />
+    </form>
+	
 </div>

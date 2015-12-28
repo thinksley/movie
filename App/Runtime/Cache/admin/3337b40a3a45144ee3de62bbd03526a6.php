@@ -12,15 +12,11 @@
 	<div id="top">
 		<div class="menu">
 			<a href="#">选择按钮</a>
-			<a href="#">选择按钮</a>
-			<a href="#">选择按钮</a>
-			<a href="#">选择按钮</a>
-			<a href="#">选择按钮</a>
+			
 		</div>
 		<div class="exit">
 			<a href="<?php echo U(GROUP_NAME.'/Index/Logout');?>" target="_self">退出</a>
-			<a href="http://bbs.houdunwang.com" target="_blank">获得帮助</a>
-			<a href="http://www.houdunwang.com" target="_blank">后盾网</a>
+			
 		</div>
 	</div>
 	<div id="left">

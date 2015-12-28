@@ -15,10 +15,10 @@
             <td>发布时间</td>
             <td>操作</td>
         </tr>
-        <?php if(is_array($article)): foreach($article as $key=>$v): ?><tr>
+        <?php if(is_array($list)): foreach($list as $key=>$v): ?><tr>
                 <td><?php echo ($v["id"]); ?></td>
-                <td><?php echo ($v["title"]); if(is_array($v["attr"])): foreach($v["attr"] as $key=>$value): ?><strong style="color:<?php echo ($value["color"]); ?>">[<?php echo ($value["name"]); ?>]</strong><?php endforeach; endif; ?></td>
-                <td><?php echo ($v["cate"]); ?></td>
+                <td><?php echo ($v["title"]); ?></td>
+                <td><?php echo ($v[0]["name"]); ?></td>
                 <td><?php echo ($v["click"]); ?></td>
                 <td><?php echo (date('y-m-d H:i',$v["time"])); ?></td>
                 <td>

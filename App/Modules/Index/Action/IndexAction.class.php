@@ -26,5 +26,20 @@ Class IndexAction extends Action{
         echo $click;
        
     }
+
+    //分类名
+    public function getCate(){
+
+       $res= M('cate')->field(array('id','name'))->select();
+       echo json_encode($res);
+    }
+
+    //分类数据
+    public function getCateList(){
+      $cid=$_GET['cateId'];
+      $where=array('cid'=>$cid);
+      $detail=M('article')->where($where)->select();
+      echo json_encode($detail);
+    }
 }
 ?>

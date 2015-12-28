@@ -4,7 +4,17 @@ Class ArticleAction extends CommonAction{
     //博文列表
     Public function index(){
 
-        $this->article=M('Article')->select();
+        $arr=array();
+        $article=M('Article')->select();
+        
+        foreach ($article as $key => $value) {
+            $where=array('id'=>$value['cid']);
+            $res=M('cate')->where($where)->select();
+            
+            $arr[$key]=array_merge($value,$res);
+        }
+
+        $this->assign('list',$arr);
 
         $this->display();
     }
@@ -47,11 +57,16 @@ Class ArticleAction extends CommonAction{
 
     //添加博文
     Public function article(){
+        import('Class.Category',APP_PATH);
+        
+        $cate=M('cate')->order('sort')->select();
+        $this->cate=Category::unlimitedForLevel($cate);
         $this->display();
     }
 
     //修改
     Public function edit(){
+        
         $id=(int)$_GET['id'];
         $where=array('id'=>$id);
         $this->list=M('article')->where($where)->select();

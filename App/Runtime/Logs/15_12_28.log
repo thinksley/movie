@@ -1,0 +1,266 @@
+[ 2015-12-28T00:00:22+08:00 ] 127.0.0.1 /movie/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001203s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012135s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012325s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000770s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000742s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000513s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000916s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003262s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000870s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000964s ]
+
+[ 2015-12-28T00:00:23+08:00 ] 127.0.0.1 /movie/index.php/index/Index/getCateList/cateId/4
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001201s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001326s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000871s ]
+SQL: SHOW COLUMNS FROM `mv_article` [ RunTime:0.010259s ]
+SQL: SELECT * FROM `mv_article` WHERE ( `cid` = 4 )  [ RunTime:0.001423s ]
+
+[ 2015-12-28T00:00:28+08:00 ] 127.0.0.1 /movie/index.php/Index/Index/getCate
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000990s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001098s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000837s ]
+SQL: SHOW COLUMNS FROM `mv_cate` [ RunTime:0.008637s ]
+SQL: SELECT `id`,`name` FROM `mv_cate`  [ RunTime:0.000915s ]
+
+[ 2015-12-28T00:00:28+08:00 ] 127.0.0.1 /movie/index.php/Index/Index/getMovieList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000799s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000939s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000936s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001079s ]
+SQL: SHOW COLUMNS FROM `mv_article` [ RunTime:0.008137s ]
+SQL: SELECT * FROM `mv_article` ORDER BY id DESC  [ RunTime:0.001305s ]
+
+[ 2015-12-28T00:00:29+08:00 ] 127.0.0.1 /movie/index.php/index/Index/getCateList/cateId/2
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000720s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000844s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000761s ]
+SQL: SHOW COLUMNS FROM `mv_article` [ RunTime:0.008265s ]
+SQL: SELECT * FROM `mv_article` WHERE ( `cid` = 2 )  [ RunTime:0.000638s ]
+
+[ 2015-12-28T00:00:32+08:00 ] 127.0.0.1 /movie/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000684s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008095s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008206s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000598s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000639s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000413s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000625s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002536s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000694s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000782s ]
+
+[ 2015-12-28T00:00:32+08:00 ] 127.0.0.1 /movie/index.php/index/Index/getCateList/cateId/2
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001250s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001377s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001574s ]
+SQL: SHOW COLUMNS FROM `mv_article` [ RunTime:0.008948s ]
+SQL: SELECT * FROM `mv_article` WHERE ( `cid` = 2 )  [ RunTime:0.001039s ]
+
+[ 2015-12-28T00:00:35+08:00 ] 127.0.0.1 /movie/index.php/Index/Index/getMovieList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001954s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002146s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001096s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001243s ]
+SQL: SHOW COLUMNS FROM `mv_article` [ RunTime:0.008633s ]
+SQL: SELECT * FROM `mv_article` ORDER BY id DESC  [ RunTime:0.001497s ]
+
+[ 2015-12-28T00:00:35+08:00 ] 127.0.0.1 /movie/index.php/Index/Index/getCate
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001273s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001394s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000915s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001053s ]
+SQL: SHOW COLUMNS FROM `mv_cate` [ RunTime:0.026835s ]
+SQL: SELECT `id`,`name` FROM `mv_cate`  [ RunTime:0.000579s ]
+
+[ 2015-12-28T00:00:36+08:00 ] 127.0.0.1 /movie/index.php/index/Index/getCateList/cateId/1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001037s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001152s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000847s ]
+SQL: SHOW COLUMNS FROM `mv_article` [ RunTime:0.008514s ]
+SQL: SELECT * FROM `mv_article` WHERE ( `cid` = 1 )  [ RunTime:0.001414s ]
+
+[ 2015-12-28T00:00:40+08:00 ] 127.0.0.1 /movie/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000905s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009749s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000687s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000661s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000508s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000744s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002842s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000784s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000871s ]
+
+[ 2015-12-28T00:00:41+08:00 ] 127.0.0.1 /movie/index.php/index/Index/getCateList/cateId/1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001435s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001563s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001940s ]
+SQL: SHOW COLUMNS FROM `mv_article` [ RunTime:0.008731s ]
+SQL: SELECT * FROM `mv_article` WHERE ( `cid` = 1 )  [ RunTime:0.001294s ]
+
+[ 2015-12-28T00:00:44+08:00 ] 127.0.0.1 /movie/index.php/Index/Index/getMovieList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001071s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001190s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001148s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001286s ]
+SQL: SHOW COLUMNS FROM `mv_article` [ RunTime:0.009191s ]
+SQL: SELECT * FROM `mv_article` ORDER BY id DESC  [ RunTime:0.001950s ]
+
+[ 2015-12-28T00:00:44+08:00 ] 127.0.0.1 /movie/index.php/Index/Index/getCate
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001050s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001170s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000917s ]
+SQL: SHOW COLUMNS FROM `mv_cate` [ RunTime:0.010179s ]
+SQL: SELECT `id`,`name` FROM `mv_cate`  [ RunTime:0.000835s ]
+
+[ 2015-12-28T11:16:49+08:00 ] 127.0.0.1 /movie/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.066504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.066775s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.415124s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.415335s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.028499s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.023998s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.026668s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.015865s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.095569s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.024628s ]
+INFO: [ view_end ] --END-- [ RunTime:0.024811s ]
+
+[ 2015-12-28T11:16:53+08:00 ] 127.0.0.1 /movie/index.php/Index/Comment/getCommentList/aid/8
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.041128s ]
+INFO: [ route_check ] --END-- [ RunTime:0.041295s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.033717s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.033868s ]
+SQL: SHOW COLUMNS FROM `mv_comment` [ RunTime:0.004193s ]
+SQL: SELECT * FROM `mv_comment` WHERE ( `aid` = 8 )  [ RunTime:0.000868s ]
+
+[ 2015-12-28T11:16:53+08:00 ] 127.0.0.1 /movie/index.php/index/Index/getMovieDetail/movies/8
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.059800s ]
+INFO: [ route_check ] --END-- [ RunTime:0.059968s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.015367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015512s ]
+SQL: SHOW COLUMNS FROM `mv_article` [ RunTime:0.008781s ]
+SQL: SELECT * FROM `mv_article` WHERE ( `id` = 8 )  [ RunTime:0.000975s ]
+
+[ 2015-12-28T11:16:54+08:00 ] 127.0.0.1 /movie/index.php/index/Index/clickNum/id/8
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.013915s ]
+INFO: [ route_check ] --END-- [ RunTime:0.014142s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.008249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008424s ]
+SQL: SHOW COLUMNS FROM `mv_article` [ RunTime:0.006299s ]
+SQL: UPDATE `mv_article` SET `click`=click+1 WHERE ( `id` = 8 ) [ RunTime:0.392656s ]
+SQL: SELECT `click` FROM `mv_article` WHERE ( `id` = 8 ) LIMIT 1   [ RunTime:0.001065s ]
+
+[ 2015-12-28T11:16:59+08:00 ] 127.0.0.1 /movie/index.php/Index/Index/getCate
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.007136s ]
+INFO: [ route_check ] --END-- [ RunTime:0.007368s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.009097s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009318s ]
+SQL: SHOW COLUMNS FROM `mv_cate` [ RunTime:0.005606s ]
+SQL: SELECT `id`,`name` FROM `mv_cate`  [ RunTime:0.001171s ]
+
+[ 2015-12-28T11:16:59+08:00 ] 127.0.0.1 /movie/index.php/Index/Index/getMovieList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.006894s ]
+INFO: [ route_check ] --END-- [ RunTime:0.007127s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.009306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009526s ]
+SQL: SHOW COLUMNS FROM `mv_article` [ RunTime:0.016491s ]
+SQL: SELECT * FROM `mv_article` ORDER BY id DESC  [ RunTime:0.001744s ]
+
+[ 2015-12-28T11:24:59+08:00 ] 127.0.0.1 /movie/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.033733s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.033889s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009610s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009754s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000604s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000602s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000462s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000773s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002754s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000811s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000924s ]
+
+[ 2015-12-28T11:25:00+08:00 ] 127.0.0.1 /movie/index.php/Index/Index/getMovieList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.045139s ]
+INFO: [ route_check ] --END-- [ RunTime:0.045288s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000674s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000796s ]
+SQL: SHOW COLUMNS FROM `mv_article` [ RunTime:0.018810s ]
+SQL: SELECT * FROM `mv_article` ORDER BY id DESC  [ RunTime:0.001346s ]
+
+[ 2015-12-28T11:25:00+08:00 ] 127.0.0.1 /movie/index.php/Index/Index/getCate
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.043592s ]
+INFO: [ route_check ] --END-- [ RunTime:0.043738s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000914s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001044s ]
+SQL: SHOW COLUMNS FROM `mv_cate` [ RunTime:0.003524s ]
+SQL: SELECT `id`,`name` FROM `mv_cate`  [ RunTime:0.010022s ]
+

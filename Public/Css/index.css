@@ -102,12 +102,13 @@ color: #888;
 .new-hd-list ul li .lb-bg,.new-hd-list ul li .lb-txt{ position: absolute; right: 20px; top: 0; z-index: 1000;border-radius: 0 0 5px 5px; font-size: 12px; width: 40px; height: 40px; line-height: 40px;}
 .movie-images {
 background-color: white;
-width: 380px;
-height: 380px;
+width: 120px;
+height: 120px;
 overflow: hidden;
 position: relative;
 float: left;
 margin-right: 20px;
 }
+.movie-images img{ width: 100%}
 h1 {margin-top: 20px;margin-bottom: 10px;font-size: 36px;}
 p{ line-height: 1.8em; color: #333}

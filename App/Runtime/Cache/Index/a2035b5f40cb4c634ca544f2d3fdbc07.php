@@ -5,7 +5,7 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="__PUBLIC__/Css/common.css" />
 	<link rel="stylesheet" href="__PUBLIC__/Css/index.css" />
-
+    <link rel="stylesheet" href="__PUBLIC__/bower_components/bootstrap/dist/css/bootstrap.min.css" />
 	<script type="text/JavaScript" src='__PUBLIC__/Js/jquery-1.7.2.min.js'></script>
 	<script type="text/JavaScript" src='__PUBLIC__/Js/common.js'></script>
 	<script src="__PUBLIC__/bower_components/jquery/dist/jquery.js"></script>
@@ -20,23 +20,26 @@
 	</script>
 </head>
 <body>
-	
-	<div class="main-inner">
-		<?php if(session('username')): ?><div style="margin:20px 0">
-					<p>欢迎您！<?php echo session('username');?>&nbsp;&nbsp;<a href="<?php echo U(GROUP_NAME.'/User/logout');?>">退出</a></p>
+<div class="container">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+			   <?php if(session('username')): ?>欢迎您！<?php echo session('username');?>&nbsp;&nbsp;<a class="btn btn-default" href="<?php echo U(GROUP_NAME.'/User/logout');?>" role="button">退出</a>
+				<?php else: ?>
+					<a class="btn btn-default" href="#/register" role="button">注册</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a class="btn btn-default"  href="#/login" role="button">登录</a><?php endif; ?>
+				
 
-			  </div>
-		<?php else: ?>
-			<div style="margin:20px 0">
-				<a href="#/register">注册</a>&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="#/login">登录</a>	
-			</div><?php endif; ?>
+			</div>
+		</div>
 	</div>
-  
-	<div class="view-container">
-		<div ng-view class="view-frame"></div>
-	</div>
-
+	  <div class="col-md-12">
+		<div class="view-container">
+			<div ng-view class="view-frame"></div>
+		</div>
+	  </div>
+</div>
+ 
 
 <script type="text/javascript">
 var movieApp = angular.module('movieApp', ['ngRoute','ngResource','ngSanitize']);
@@ -60,6 +63,10 @@ movieApp.config(['$routeProvider',
         templateUrl: '/movie/antpl/login.html',
         controller: 'LoginCtrl'
       }).
+      when('/cate/:cateId', {
+        templateUrl: '/movie/antpl/catelist.html',
+        controller: 'CateListCtrl'
+      }).
       otherwise({
         redirectTo: '/movies'
       });
@@ -69,6 +76,9 @@ movieApp.controller('MovieListCtrl',['$scope','$location','$resource',function($
 
 	var objRe = $resource( '/movie/index.php/Index/Index/getMovieList',{},{});
 	$scope.data = objRe.query();
+
+	var objCate = $resource( '/movie/index.php/Index/Index/getCate',{},{});
+	$scope.dataCate = objCate.query();
 	
 }]);
 
@@ -113,6 +123,19 @@ movieApp.controller('AddCommentCtrl',['$scope','$http',function($scope,$http){
 
 }]);
 
+
+movieApp.controller('RegisterCtrl',['$scope',function($scope){
+	
+}]);
+
+movieApp.controller('LoginCtrl',['$scope',function($scope){
+	
+}]);
+movieApp.controller('CateListCtrl',['$scope','$resource','$routeParams',function($scope,$resource,$routeParams){
+	var objRe = $resource( '/movie/index.php/index/Index/getCateList/cateId/'+$routeParams.cateId,{},{});
+	$scope.data = objRe.query();
+
+}]);
 </script>
 </body>
 </html>

@@ -55,7 +55,18 @@ $(function(){
                 <th colspan="2" align="center">博文修改</th>
             </tr>
             
-            
+            <tr>
+                <td align="right" width="10%">
+                所属分类
+                </td>
+                <td>
+                    <select name="cid">
+                        <option value="">==请选择==</option>
+                        <?php if(is_array($cate)): foreach($cate as $key=>$v): ?><option value="<?php echo ($v["id"]); ?>"><?php echo ($v["html"]); echo ($v["name"]); ?></option><?php endforeach; endif; ?>
+
+                    </select>
+                </td>
+            </tr>
             <tr>
                 <td align="right">点击次数：</td>
                 <td><input type="text" style="width:250px" name="click" value="<?php echo ($list[0]["click"]); ?>" /> </td>

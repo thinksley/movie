@@ -15,11 +15,11 @@
             <td>发布时间</td>
             <td>操作</td>
         </tr>
-        <foreach name="article" item="v">
+        <foreach name="list" item="v">
             <tr>
                 <td>{$v.id}</td>
-                <td>{$v.title}<foreach name="v.attr" item="value"><strong style="color:{$value.color}">[{$value.name}]</strong></foreach></td>
-                <td>{$v.cate}</td>
+                <td>{$v.title}</td>
+                <td>{$v[0].name}</td>
                 <td>{$v.click}</td>
                 <td>{$v.time|date='y-m-d H:i',###}</td>
                 <td>

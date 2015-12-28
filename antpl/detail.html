@@ -11,11 +11,11 @@
 	<div ng-bind-html="data[0].content"></div>
 </div>
 <div class="main-inner comment-list" ng-controller="CommentListCtrl">
-	<ul>
-		<li ng-repeat="vo in data">
-			<span>{{vo.username}}</span>说：<span>{{vo.comment}}</span>
-		</li>
-	</ul>
+	
+	<div class="row" ng-repeat="vo in data">
+	  <div class=" col-md-2">{{vo.username}}说：</div>
+	  <div class=" col-md-10">{{vo.comment}}</div>
+	</div>
 </div>
 
 <div class="main-inner" ng-controller="AddCommentCtrl">
