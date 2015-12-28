@@ -39,6 +39,11 @@
 			<dd><a href="<?php echo U(GROUP_NAME.'/Category/addCate');?>">添加分类</a></dd>
 			
 		</dl>
+		<dl>
+			<dt>用户管理</dt>
+			<dd><a href="<?php echo U(GROUP_NAME.'/User/index');?>">用户列表</a></dd>
+			
+		</dl>
 	</div>
 	<div id="right">
 		<iframe name="iframe" src="#"></iframe>
