@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <css file='__PUBLIC__/Css/public.css' />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/public.css" />
 </head>
 <body>
-    <form action="{:U(GROUP_NAME.'/User/toEdit')}" method="post">
+    <form action="<?php echo U(GROUP_NAME.'/User/toAdd');?>" method="post">
     
     <table class="table">
         <tr>
@@ -14,7 +14,11 @@
         </tr>
         <tr>
             <td align="right">用户名：</td>
-            <td><input type="text" style="width:250px" name="username" value="{$list[0].username}" /> </td>
+            <td><input type="text" style="width:250px" name="username" value="" /> </td>
+        </tr>
+        <tr>
+            <td align="right">密码：</td>
+            <td><input type="text" style="width:250px" name="password" value="" /> </td>
         </tr>
         <tr>
 
@@ -24,10 +28,7 @@
                 <select name="group">
                     <option value="">==请选择==</option>
                     
-                    <foreach name="role" item="v">
-                        
-                        <option value="{$v.role_ename}" <if condition="$list[0]['group'] eq $v['role_ename']"> selected="selected"</if>>{$v.role_name}</option>
-                    </foreach>
+                    <?php if(is_array($role)): foreach($role as $key=>$v): ?><option value="<?php echo ($v["role_ename"]); ?>"><?php echo ($v["role_name"]); ?></option><?php endforeach; endif; ?>
 
                 </select>
             </td>

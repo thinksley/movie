@@ -23,7 +23,7 @@
                 <td><?php echo ($v["group"]); ?></td>
                 <td>
                     [<a href="<?php echo U(GROUP_NAME.'/User/edit',array('id'=>$v['id']));?>">修改</a>]
-                    [<a href="<?php echo U(GROUP_NAME.'/User/toTrach',array('id'=>$v['id'],'type'=>1));?>">删除</a>]
+                    [<a href="<?php echo U(GROUP_NAME.'/User/toTrach',array('id'=>$v['id']));?>">删除</a>]
                 </td>
             </tr><?php endforeach; endif; ?>
     </table>

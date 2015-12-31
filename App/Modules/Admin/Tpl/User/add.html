@@ -6,7 +6,7 @@
     <css file='__PUBLIC__/Css/public.css' />
 </head>
 <body>
-    <form action="{:U(GROUP_NAME.'/User/toEdit')}" method="post">
+    <form action="{:U(GROUP_NAME.'/User/toAdd')}" method="post">
     
     <table class="table">
         <tr>
@@ -14,7 +14,11 @@
         </tr>
         <tr>
             <td align="right">用户名：</td>
-            <td><input type="text" style="width:250px" name="username" value="{$list[0].username}" /> </td>
+            <td><input type="text" style="width:250px" name="username" value="" /> </td>
+        </tr>
+        <tr>
+            <td align="right">密码：</td>
+            <td><input type="text" style="width:250px" name="password" value="" /> </td>
         </tr>
         <tr>
 
@@ -26,7 +30,7 @@
                     
                     <foreach name="role" item="v">
                         
-                        <option value="{$v.role_ename}" <if condition="$list[0]['group'] eq $v['role_ename']"> selected="selected"</if>>{$v.role_name}</option>
+                        <option value="{$v.role_ename}">{$v.role_name}</option>
                     </foreach>
 
                 </select>

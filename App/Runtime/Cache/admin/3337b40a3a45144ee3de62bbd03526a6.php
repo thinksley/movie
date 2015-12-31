@@ -42,6 +42,17 @@
 		<dl>
 			<dt>用户管理</dt>
 			<dd><a href="<?php echo U(GROUP_NAME.'/User/index');?>">用户列表</a></dd>
+			<dd><a href="<?php echo U(GROUP_NAME.'/User/add');?>">添加用户</a></dd>
+		</dl>
+		<dl>
+			<dt>角色管理</dt>
+			<dd><a href="<?php echo U(GROUP_NAME.'/Role/index');?>">角色列表</a></dd>
+			<dd><a href="<?php echo U(GROUP_NAME.'/Role/add');?>">添加角色</a></dd>
+			
+		</dl>
+		<dl>
+			<dt>其他</dt>
+			<dd><a href="<?php echo U(GROUP_NAME.'/Other/index');?>">导入</a></dd>
 			
 		</dl>
 	</div>

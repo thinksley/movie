@@ -6,26 +6,36 @@
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/public.css" />
 </head>
 <body>
+    <form action="<?php echo U(GROUP_NAME.'/User/toEdit');?>" method="post">
+    
     <table class="table">
         <tr>
-            <td>ID</td>
-            <td>用户名</td>
-            <td>上次登录时间</td>
-            <td>上次登录ip</td>
-            <td>用户组</td>
-            <td>操作</td>
+            <th colspan="2" align="center">用户修改</th>
         </tr>
-        <?php if(is_array($list)): foreach($list as $key=>$v): ?><tr>
-                <td><?php echo ($v["id"]); ?></td>
-                <td><?php echo ($v["username"]); ?></td>
-                <td><?php echo (date('y-m-d H:i',$v["logintime"])); ?></td>
-                <td><?php echo ($v["loginip"]); ?></td>
-                <td><?php echo ($v["group"]); ?></td>
-                <td>
-                    [<a href="<?php echo U(GROUP_NAME.'/User/edit',array('id'=>$v['id']));?>">修改</a>]
-                    [<a href="<?php echo U(GROUP_NAME.'/User/toTrach',array('id'=>$v['id'],'type'=>1));?>">删除</a>]
-                </td>
-            </tr><?php endforeach; endif; ?>
+        <tr>
+            <td align="right">用户名：</td>
+            <td><input type="text" style="width:250px" name="username" value="<?php echo ($list[0]["username"]); ?>" /> </td>
+        </tr>
+        <tr>
+
+            <td align="right">用户组：</td>
+            
+            <td>
+                <select name="group">
+                    <option value="">==请选择==</option>
+                    
+                    <?php if(is_array($role)): foreach($role as $key=>$v): ?><option value="<?php echo ($v["role_ename"]); ?>" <?php if($list[0]['group'] == $v['role_ename']): ?>selected="selected"<?php endif; ?>><?php echo ($v["role_name"]); ?></option><?php endforeach; endif; ?>
+
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="确定" />
+            </td>
+        </tr>
+        
     </table>
+    </form>
 </body>
 </html>

@@ -28,7 +28,7 @@ Class LoginAction extends Action
 		if(!$user || $user['password']!=$pwd){
 			$this->error('账号或密码错误');
 		}
-
+		
 		if($user['group']!='admin'){
 			$this->error('非管理员，禁止访问');
 		}
